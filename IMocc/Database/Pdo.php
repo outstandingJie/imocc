@@ -8,9 +8,9 @@ class Pdo implements IDatabase
      */
     protected $conn;
 
-    public function content($host, $user, $password, $dbname)
+    public function content($host, $user, $passwd, $dbname)
     {
-        $conn = new \PDO("mysql:host=$host;dbname:$dbname",$user,$password);
+        $conn = new \PDO("mysql:host=$host;dbname=$dbname", $user, $passwd);
         $this->conn = $conn;
     }
 

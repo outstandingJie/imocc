@@ -3,6 +3,7 @@ namespace IMocc;
 //工厂模式,工厂方法或者类生成对象，而不是直接在代码中new
 class Factory
 {
+    static $proxy = null;
     static public function createDatabase()
     {
 
@@ -64,7 +65,7 @@ class Factory
         $db = Register::get($key);
         if (!$db) {
             $db = new Database\MySQLi();
-            $db->connect($db_conf['host'], $db_conf['user'], $db_conf['password'], $db_conf['dbname']);
+            $db->content($db_conf['host'], $db_conf['user'], $db_conf['password'], $db_conf['dbname']);
             Register::set($key, $db);
         }
         return $db;
