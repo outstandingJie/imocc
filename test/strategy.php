@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'/index.php';
+include __DIR__ . '/../index.php';
 /**
  * 策略模式使用例子
  * Class page

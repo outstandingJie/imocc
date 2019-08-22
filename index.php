@@ -52,5 +52,6 @@ foreach ($users as $user){
 
 
 
-IMocc\Application::getInstance(__DIR__)->dispatch();
+IMocc\Application::getInstance(__DIR__);
+//IMocc\Application::getInstance(__DIR__)->dispatch();
 

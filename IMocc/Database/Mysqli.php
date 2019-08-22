@@ -13,7 +13,9 @@ class Mysqli implements IDatabase
 
     public function query($sql)
     {
-        return mysqli_query($this->conn,$sql);
+        $res = mysqli_query($this->conn,$sql);
+        if(!$res) throw new \Exception('error');
+        return $res;
     }
 
     public function close()

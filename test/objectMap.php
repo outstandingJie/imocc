@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'/index.php';
+include __DIR__ . '/../index.php';
 /**
  * 数据对象映射模式结合工厂模式、注册树模式使用例子
  * Class Page

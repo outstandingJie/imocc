@@ -14,7 +14,7 @@ class Database
     }
 
     //对象只被创建一次
-    public function getInstance()
+    static public function getInstance()
     {
         if(self::$db){
             return self::$db;
